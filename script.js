@@ -22,7 +22,7 @@ const getPokemonData = (pokemonName) => {
 }
 
 const toCreateQuery = () => {
-  getPokemonData(input.value);
+  getPokemonData(input.value.toLowerCase());
 }
 
 
