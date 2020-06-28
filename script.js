@@ -9,6 +9,7 @@ async function retrieveData(urlFetch) {
   const { front_default } = sprites;
 
   document.getElementById("pokeToShow").src = front_default;
+  document.getElementById("pokeName").textContent = input.value.toUpperCase();
 }
 
 const getPokemonData = (pokemonName) => {
