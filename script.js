@@ -7,9 +7,12 @@ async function retrieveData(urlFetch) {
 
   const { sprites } = jsonData;
   const { front_default } = sprites;
-
+  const { types } = jsonData;
+  const { type } = types[0];
+  const typeToShow = "Tipo: " + type.name.toUpperCase();
   document.getElementById("pokeToShow").src = front_default;
   document.getElementById("pokeName").textContent = input.value.toUpperCase();
+  document.getElementById("pokeType").textContent = typeToShow;
 }
 
 const getPokemonData = (pokemonName) => {
